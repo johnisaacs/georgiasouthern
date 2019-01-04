@@ -1,0 +1,103 @@
+/*
+Theme Name: Georgia Southern EDU
+Author: Georgia Southern University Web Team
+Author URI: http://wordpress.georgiasouthern.edu
+Description: Georgia Southern University theme for EDU landing pages based on Bootstrap.
+Version: 1.0
+*/
+
+/* WORDPRESS CLASSES */
+.alignleft {float:left;width:auto;display:inline;margin-right:15px;}
+.alignright {float:right;width:auto;display:inline;margin-left:15px;}
+.aligncenter {clear:both;display: block;margin-left: auto;margin-right: auto;}
+.alignnone {clear:both;display: block;margin-top:1em;margin-bottom:1em;}
+
+.wp-caption {
+  background: #EEEEEE;
+  padding-top: 5px;
+  text-align: center;
+  height:auto;
+  max-width:100%;
+  display:block;
+}
+.wp-caption-text {
+	font-size: 0.9em;
+	font-style: italic;
+	line-height: 1.3em;
+	padding: 0 8px 10px;	
+	margin-bottom:0;
+}
+
+/* Consolidation tab */
+
+.nav-tab {
+	border-radius: 0 0 4px 4px;
+    font-size: 0.95em;
+    margin:0 0 -43px 0;
+    padding:10px 49px 8px;
+    text-shadow: 0.05em 0.05em 0.05em #333;   
+	text-align:center;
+	width:auto;
+	clear:both;
+}
+.nav-tab a {
+	color:#fff;	
+}
+.nav-tab a:hover, .nav-tab a:active {
+	color:#fff;	
+	text-decoration:none;	
+}
+.nav-tab:hover {
+}
+/* Majors and Programs table */
+table#tablepress-1 th {
+	font-size:.85em;
+	font-weight:normal;
+	background:none;		
+}
+table#tablepress-1 td {
+	border:1px solid #e5e5e5;		
+}
+table#tablepress-1 .column-2, table#tablepress-1 .column-3, table#tablepress-1 .column-4, table#tablepress-1 .column-5, table#tablepress-1 .column-6, table#tablepress-1 .column-7 {
+	text-align:center;	
+}
+table#tablepress-1 .column-8 {
+	font-size:.75em;		
+}
+/* xs */
+@media (max-width: 767px) {	
+	.nav-tab {		
+		font-size: .8em;
+		line-height:1.1em;
+	}
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	.nav-tab {		
+		font-size: .8em;
+		line-height:1.1em;
+	}
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.nav-tab {
+		font-size: .8em;
+		line-height:1.1em;
+	}
+}
+
+/* lg */
+@media (min-width: 1200px) {
+	.nav-tab {
+		
+	}
+	
+}
+
+
+
+
+	
+	

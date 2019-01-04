@@ -1,0 +1,645 @@
+// 1/26/18
+
+// Global Classes
+@aqua: rgb(0,93,144); /*accessible aqua*/
+@primary: rgb(0,93,144); /*accessible aqua*/
+@blue: rgb(4,30,66);
+@navy: rgb(4,30,66);
+@gold: rgb(169,146,96); 
+@lightgray: rgb(228,228,228);
+
+// Global Styles
+a {
+	color:@aqua;
+	text-decoration: none;
+	&:active, &:focus, &:hover {
+		color: @blue;	
+	}	
+}
+.breadcrumbs {
+	font-size:.8em;
+}
+
+// Buttons & UI Elements
+.btn.btn-outline {
+	border:1px solid #fff;
+	padding:10px 15px;
+	font-size:1.2em;
+	background:transparent;
+	color:#fff !important;
+	font-weight:normal;
+	font-family:Cabin;
+}	
+
+// Global Header - Nav Menus
+.navbar.navbar-gs {
+	border:0;
+	margin-bottom:0;
+	min-height:0;
+	.new-nav-top {		
+		margin-bottom:25px;
+		font-size:.8em;
+		color:#eee;
+		.container {
+			padding-right:0;
+			padding-left:0;
+		}
+		ul.nav.navbar-nav {
+			margin-top:3px;
+			li {
+				a {
+					padding-top:8px;
+					padding-bottom:8px;
+					padding-right:15px;
+					padding-left:15px;
+					color:#eee;
+					&:active, &:focus, &:hover {
+						background-color:transparent;
+						//border-bottom:2px solid @gold;
+						color:@gold;
+					}
+				}
+				&.quicklinks {					
+					&.open {
+						a, a:hover, a:focus, a:active {
+							background-color:#fff;
+							color:@blue;
+						}						
+					}
+				}
+				&.dropdown {
+					ul.dropdown-menu {
+						padding: 8px;
+						background-color:#fff;
+						border:0;
+						li {
+							a {
+								color:@blue;
+								font-size:.9em;
+								padding: 4px 8px;
+								&:active, &:focus, &:hover {
+									background-color:#fff;
+									color:@gold;
+								}
+							}
+						}
+						li.dropdown-header {
+							font-size:12px;
+							color:@gold;
+							font-family:CabinBoldItalic;
+							padding:5px 0 0 5px;
+						}
+					}
+					&.open {
+						background-color:#fff;
+						color:@gold;
+						a, a:hover, a:focus, a:active {
+							background-color:#fff;
+							color:@blue;
+						}
+					}
+				}		
+			}					
+		}
+	}
+	.new-nav-bottom {
+		//margin-top:25px;
+		color: #fff;
+		.container {
+			padding-right:0;
+			padding-left:0;
+		}
+		.navbar-nav {
+			li  {			
+				a {
+					padding:8px 22px;					
+					color:#fff;
+					&:active, &:focus, &:hover {
+						background-color:@gold;						
+					}					
+				}					
+			}
+			&.navbar-left.menu-topic {
+				li {
+					&.dropdown {
+						ul.dropdown-menu {
+							padding: 8px;
+							background-color:#fff;
+							border:0;
+							li {
+								a {
+									color:@blue;
+									font-size:1.1em;
+									padding: 8px 15px;
+									&:active, &:focus, &:hover {
+										background-color:#fff;										
+									}
+								}
+							}
+							li.dropdown-header {
+								font-size:13px;
+								color:@gold;
+								font-family:CabinBoldItalic;
+								padding:5px 0 0 5px;
+							}
+						}
+						&.open {
+							background-color:#fff;
+							color:@gold;
+							a, a:hover, a:focus, a:active {
+								background-color:#fff;
+								color:@blue;
+							}
+						}
+					}					
+				}	
+			}
+			&.navbar-right.menu-task {
+				margin-right:0;
+				text-align:right;
+				li {
+					margin-right:1px;
+					margin-left:1px;
+					&.dropdown {
+						ul.dropdown-menu {
+							padding: 8px;
+							background-color:#fff;
+							border:0;							
+							li {
+								a {
+									color:@blue;	
+									font-size:1.1em;									
+									padding: 8px 15px;
+									&:active, &:focus, &:hover {
+										background-color:#fff;
+										color:@blue;										
+									}
+								}
+							}							
+						}
+					}
+					&.apply {
+						a {
+							//border-bottom:2px solid @gold;
+							color:#fff;
+							background-color:@gold;
+						}
+						&.open {
+							background-color:#fff;
+							color:@gold;
+							a, a:hover, a:focus, a:active {
+								background-color:#fff;
+								color:@blue;
+							}	
+						}
+					}					
+					a {
+						padding:8px 16px;						
+						color:#fff;
+						//text-shadow: 1px 1px 2px #111;
+						&:active, &:focus, &:hover {
+							background-color:#gold;						
+							color:#fff;
+							//border-bottom:2px solid @gold;
+						}	
+					}
+				}
+			}
+		}
+	}
+	button.navbar-toggle {
+		height: 40px;
+		width: 45px;
+		border-color:transparent;
+		border-radius:0;
+		.icon-bar {
+			background-color:#fff;
+		}
+		&:hover, &:focus {
+		 background-color:@blue;
+		}
+	}
+}
+// Global Header - Search Form
+.navbar-form {
+	padding-right:0;
+	box-shadow:0 !important;
+	-webkit-box-shadow:0 !important;
+	border-top:0;
+	border-bottom:0;
+	.form-group {
+		input#searchbox {
+			background-color:transparent;
+			border-radius:0;
+			border-color:#fff;
+			color:#fff;
+		}
+		button {
+			border-radius:0;
+			//text-shadow: 1px 1px 1px #111;
+			color:#fff;
+			border:1px solid #fff;
+			background-color:transparent;
+			&:active, &:hover, &:focus {
+				color:@blue;
+				background-color:#eee;
+			}
+		}
+	}
+}
+
+// EDU Slider 
+.carousel-caption {
+	text-align:left;
+	font-family:Cabin;
+}
+#pb_slideshow_rslider-1 .nivo-prevNav, #pb_slideshow_rslider-1 .nivo-nextNav {
+	background: transparent !important;
+	color:#eee !important;
+	font-size:5em !important;
+	padding:15px !important;
+	border:0 !important;
+	border-radius:0 !important;
+	-webkit-box-shadow: 0 !important;
+	-moz-box-shadow: 0 !important;
+	box-shadow: 0 !important;
+}
+.nivo-caption {	
+	bottom:50px !important;
+	background: transparent !important;
+	width:33% !important;
+	color:#041e42 !important;
+	font-size:1.75em !important;
+	line-height:1.25em !important;
+	padding:15px 25px !important;
+	opacity: 1 !important;
+	left:150px !important;
+}
+
+// EDU Audience Icons
+.info-graphics {
+	p.info-graphic {
+		height:138px;
+		width:138px;
+		padding:35px 15px 0;
+		font-size:1.65em !important;
+		line-height:1.2em;
+		color:#fff;
+		margin: 0 auto;
+		text-align:center;
+		a {
+			color:#fff;
+			&:link {
+				color:#fff;
+			}
+			&:active, &:focus, &:hover {
+				text-decoration:none;
+			}
+		}
+	}
+}
+// EDU Intro Message & Icons
+#content {
+	.intro {
+		.icon-box {
+			padding: 20px 30px; 
+			background-color: #eee; 
+			border: 1px solid #ddd;
+			margin-bottom: 8px;
+			p {
+				color:@blue;
+				font-size: 1.5em;
+				line-height: 1em;
+				.fa {
+					font-size: 1.85em;					
+				}
+			}				
+		}
+	}
+}
+// EDU News & Events
+.news {	
+	ul {
+		list-style-type:none;	
+		text-align:left;
+		padding-left:0;
+		margin-top:30px;
+		li {
+			margin-bottom:15px;						
+			a {
+				font-size:1em;
+				
+			}
+			&:first-child {
+				margin-bottom:25px;
+				a {
+					font-size:1.25em;
+					line-height:1em;
+					font-family:CabinBold;
+					font-weight:bold;
+				}
+			}
+		}
+	}
+	
+}
+
+// EDU Future Students Section
+.future ul {
+	list-style-type:none;	
+	text-align:left;	
+	li {
+		margin-bottom:15px;
+		font-size:1.35em;
+		line-height:1.65em;
+	}
+}
+
+
+// Global Footer
+footer#global {
+	color:#fff;
+	a, a:link {
+		color:#fff;
+		text-decoration:none;
+	}
+	a:active, a:focus, a:hover {
+		text-decoration:underline;
+		color:@gold;
+	}
+	h6, subheading {
+		font-size:1.25em;
+		color: @gold;
+		margin-bottom:15px;
+			a, a:link {				
+				color: @gold !important;
+			}
+	}
+	.locations {
+		.campus {
+			margin-bottom: 0;			
+		}	
+	}
+	.audiences {
+		ul {
+			list-style-type:none;
+			padding-left:0;
+			li {
+				padding-bottom:8px;
+				font-size:1.1em;
+			}
+		}
+	}
+	.resources {
+		ul {
+			list-style-type:none;
+			padding-left:0;
+			li {
+				padding-bottom:8px;
+				font-size:1.1em;
+			}
+		}
+	}
+	.social {
+		img {
+			padding: 5px 10px 5px 0; 		
+			&:hover {
+				opacity: .7;				
+			}
+		}
+	}
+	.legal {
+	
+	}
+	.copyright {
+		p {
+			text-align:right;
+		}	
+	}
+}
+
+
+// Media Queries
+
+// Extra Small
+@media (max-width: 767px) {
+	header {	
+		text-align:center;
+		.navbar.navbar-gs {
+			.new-nav-top {
+				margin-bottom:0;
+				.navbar-header {
+					.navbar-brand {
+						float: none;
+						clear: both;
+						img {
+							margin:0 auto;
+						}
+					}
+				}
+			}
+			.new-nav-bottom {				
+				.navbar-nav {
+					&.navbar-left.menu-topic {
+						li {
+							&.dropdown {
+								ul.dropdown-menu {
+									padding: 8px;
+									background-color:#fff;
+									border:0;
+									li {
+										a {
+											color:@blue;
+											font-size:1.1em;
+											padding: 8px 15px;
+											&:active, &:focus, &:hover {
+												background-color:#fff;
+												color:@gold;												
+											}
+										}
+									}
+									li.dropdown-header {
+										display:none;
+									}
+								}
+								&.open {
+									background-color:#fff;
+									color:@gold;
+									a, a:hover, a:focus, a:active {
+										background-color:#fff;
+										color:@blue;
+									}
+								}
+							}					
+						}	
+					}
+					&.navbar-right.menu-task {
+						margin-right:0;
+						text-align:center;
+						li {
+							margin-right:1px;
+							margin-left:1px;
+							&.dropdown {
+								ul.dropdown-menu {
+									padding: 8px;
+									background-color:#fff;
+									border:0;							
+									li {
+										a {
+											color:@blue;	
+											font-size:1.1em;									
+											padding: 8px 15px;
+											&:active, &:focus, &:hover {
+												background-color:#fff;
+												color:@blue;										
+											}
+										}
+									}							
+								}
+							}
+							&.apply {
+								a {
+									//border-bottom:2px solid @gold;
+									color:#fff;
+									background-color:@blue;
+								}
+								&.open {
+									background-color:#fff;
+									color:@gold;
+									a, a:hover, a:focus, a:active {
+										background-color:#fff;
+										color:@blue;
+									}	
+								}
+							}					
+							a {
+								padding:8px 16px;						
+								color:#fff;
+								//text-shadow: 1px 1px 2px #111;
+								&:active, &:focus, &:hover {
+									background-color:#gold;						
+									color:#fff;
+									//border-bottom:2px solid @gold;
+								}	
+							}
+						}
+					}
+				} 
+			}
+		}
+	}
+	.navbar-form.gs-search {
+		margin-right:auto;
+		margin-left:auto;
+		margin-top:8px;
+		margin-bottom:8px;		
+		width:80%;
+		padding:0;
+		.form-group {			
+			input#searchbox {				
+				margin-bottom:10px;
+				float:none;
+				width:100%;
+			}
+			button {
+				border-radius:0;
+				float:none;
+				width:auto;
+				clear:right;
+			}
+		}
+	}
+	.navbar-collapse {
+		box-shadow:0;
+	}
+	#content {	
+		.info-graphics {
+			p.info-graphic {
+				height:auto;
+				width:100%;
+				font-size:1.2em !important;
+				padding:20px 15px;
+				margin: 0 0 15px 0;
+				border-radius:0;
+			}
+		}
+		.intro {
+			.icon-box {
+				padding:15px;				 
+				p {
+					font-size: 20px;
+					line-height: 25px;
+					.fa {
+						font-size: 34px;					
+					}
+				}				
+			}			
+		}
+		.news, .news ul, .news a, #five p {
+			text-align:center;	
+		}
+		.future ul {
+			padding-left:0;
+			text-align:center;	
+			li {
+				margin-bottom:15px;
+				font-size:17px;
+				line-height:26px;
+			}
+		}
+	}
+	footer#global {
+		text-align:center;		
+		h6, subheading {
+			font-size:1.1em;			
+			margin-bottom:5px;
+		}		
+		.copyright p {			
+			text-align:center;		
+		}			
+	}
+}
+
+// Small
+@media (min-width: 768px) and (max-width: 991px) {
+	#content {	
+		.info-graphics {
+			p.info-graphic {
+			height: 105px;
+			width: 105px;
+			font-size:1em !important;
+			padding: 35px 15px 0;
+			}
+		}
+		.intro {
+			.icon-box {
+				padding:30px;				 
+				p {
+					font-size: 28px;
+					line-height: 32px;
+					.fa {
+						font-size: 30px;					
+					}
+				}				
+			}			
+		}
+	}
+	.navbar.navbar-gs {
+		.new-nav-bottom {
+			.navbar-nav {
+				&.navbar-right.menu-task {					
+					text-align:center;
+				}
+			} 
+		}
+	}
+}
+
+// Medium
+@media (min-width: 992px) and (max-width: 1199px) {	
+}
+
+// Large
+@media (min-width: 1200px) {
+}
+
